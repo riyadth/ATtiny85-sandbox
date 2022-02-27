@@ -1,0 +1,3 @@
+avr-gcc -mmcu=attiny85 test.c
+avr-objdump --disassemble a.out
+avr-objcopy -j .text -j .data -O ihex a.out a.hex
