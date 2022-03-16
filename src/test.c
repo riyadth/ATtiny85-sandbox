@@ -79,7 +79,7 @@ typedef enum {
  * Timer 1 - 8 bit with PWM - separate prescaler - can use PLL at 64MHz
  * Watchdog timer - period (typ): 16/32/64/128/256/512/1024/2048/4096/8192ms
  */
-static uint8_t _wdt_tick = 0;
+static volatile uint8_t _wdt_tick = 0;
 static void _init_wdt_timer(wdt_period_t period)
 {
     if (period < WDT_PERIOD_MS_INVALID)
